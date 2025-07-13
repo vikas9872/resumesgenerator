@@ -15,11 +15,10 @@ import { useResume } from '../Context';
 import { MdOutlineFileDownload } from 'react-icons/md';
 
 const Main = () => {
-
     const { printElem } = useResume();
-
     const handlePrint = useReactToPrint({
-        content: () => printElem.current,
+        // content: () => printElem.current,
+        contentRef: printElem,
     });
 
     return (
